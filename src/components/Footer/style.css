@@ -1,0 +1,9 @@
+.footer {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-right: 200px;
+    margin-top: 230px;
+    color: #081E34;
+}

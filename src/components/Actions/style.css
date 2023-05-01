@@ -1,0 +1,59 @@
+.actions{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;  
+}
+
+.toDo {
+    background: linear-gradient(0deg, rgba(8, 30, 52, 0.05), rgba(8, 30, 52, 0.05)), #FFFBFE;
+    border-radius: 100px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 87px;
+    height: 40px;
+    padding: 10px 24px;
+    margin-right: 16px;
+    border: none;
+}
+
+.done{
+    background: linear-gradient(0deg, rgba(8, 30, 52, 0.05), rgba(8, 30, 52, 0.05)), #F0F0F0;
+    border-radius: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 87px;
+    height: 40px;
+    padding: 10px 24px;
+    margin-right: 16px;
+    border: none;
+}
+
+.trash{
+    background: linear-gradient(0deg, rgba(8, 30, 52, 0.05), rgba(8, 30, 52, 0.05)), #F0F0F0;
+    border-radius: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 87px;
+    height: 40px;
+    padding: 10px 24px;
+    border: none;
+}
+
+.add{
+    background: linear-gradient(0deg, #081E34, #081E34), #F0F0F0;
+    border-radius: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 14px;
+    color: #F0F0F0;
+    width: 52px;
+    height: 52px;
+    font-size: 36px;
+    position: absolute;
+    left: 2100px;
+    top: 274px;
+}
