@@ -1,7 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import "./style.css";
 
 export default function ToDo(){
+    const [isBtnClicked, setBtnClicked] = useState(false);
+
+    const clicked = () => {
+        setBtnClicked(!isBtnClicked);
+    }
     return (
     <div className="plans">
         <div className="title">
@@ -14,7 +19,23 @@ export default function ToDo(){
             <p>Buy One Way Ticket to San Fransico</p>
             <p>Go to Gym</p>
             <p>Buy Groceries</p>
-            <button className="trashButton">&#128465; Move to Trash</button>
+            <button onClick={clicked} className="trashButton" style={{
+                backgroundColor: isBtnClicked ? 'rgba(0, 0, 0, 0.16)' : 'rgba(0, 0, 0, 0.26)', 
+                display: 'flex', 
+                flexDirection: 'row', 
+                alignItems: 'center'
+                }}>
+                <p style={{
+                    fontSize: 26, 
+                    paddingRight: 15, 
+                    paddingLeft: 5, 
+                    paddingBottom: 7
+                    }}>&#128465;</p>
+                <p style={{
+                    fontSize: 16, 
+                    paddingBottom: 5
+                    }}>Move to Trash</p>
+            </button>
         </div>
     </div>
     )
