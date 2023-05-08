@@ -43,13 +43,15 @@ function App() {
   const [deletedTodos, setDeletedTodos] = useState([]);
 
   const handleAddTask = () => {
-    setTodos([...todos, {
-      task: inputTodo, 
-      id: Date.now().toString(),
-      isCompleted: false,
-      isInTrash: false
-    }]);
-    setInputTodo("");
+    if (inputTodo.trim() !== "") {
+      setTodos([...todos, {
+        task: inputTodo, 
+        id: Date.now().toString(),
+        isCompleted: false,
+        isInTrash: false
+      }]);
+      setInputTodo("");
+    }
   };
 
   //Implement delete feature
