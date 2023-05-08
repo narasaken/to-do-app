@@ -3,6 +3,18 @@
     flex-direction: row;
     align-items: flex-start;  
 }
+.all {
+    background: linear-gradient(0deg, rgba(8, 30, 52, 0.05), rgba(8, 30, 52, 0.05)), #FFFBFE;
+    border-radius: 100px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 87px;
+    height: 40px;
+    padding: 10px 24px;
+    margin-right: 16px;
+    border: none;
+}
 
 .toDo {
     background: linear-gradient(0deg, rgba(8, 30, 52, 0.05), rgba(8, 30, 52, 0.05)), #FFFBFE;
@@ -56,4 +68,70 @@
     position: absolute;
     left: 2100px;
     top: 274px;
+}
+
+.add-window {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 16px;
+    width: 268px;
+    height: 234px;
+    background: #E4E6E7;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.16);
+    border-radius: 12px;
+    position: absolute;
+    left: 1700px;
+    top: 65px;
+}
+
+.add-task{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22px;
+    color: #151517;
+    position: absolute;
+    bottom: 125px;
+}
+
+.add-input{
+    background: #FFFFFF;
+    border-radius: 8px;
+    width: 236px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    border: none;
+    padding: 14px;
+    position: relative;
+    top: 35px;
+}
+
+.add-button{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    width: 76px;
+    height: 40px;
+    background: linear-gradient(0deg, #081E34, #081E34), #FFFBFE;
+    border-radius: 100px;
+    margin-top: 10px;
+    position: relative;
+    top: 38px;
+}
+
+.add-text{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 18px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #FFFFFF;
+    margin: 9px 20px;
 }

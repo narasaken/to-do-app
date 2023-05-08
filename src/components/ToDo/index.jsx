@@ -1,42 +1,49 @@
-import React, { useState } from "react";
 import "./style.css";
 
-export default function ToDo(){
-    const [isBtnClicked, setBtnClicked] = useState(false);
+export default function ToDo({filter, toggleCompleteTask, handleFilter, handleDeleteTask, handleRestoreTask}){
 
-    const clicked = () => {
-        setBtnClicked(!isBtnClicked);
-    }
-    return (
-    <div className="plans">
+    return ( 
         <div className="title">
-            <h2>To Do</h2>
+            <h2>To Do</h2> 
             <hr />
-        </div>
-        <div className="lists">
-            <p>Write Essay</p>
-            <p>One Hour CSS Course Online</p>
-            <p>Buy One Way Ticket to San Fransico</p>
-            <p>Go to Gym</p>
-            <p>Buy Groceries</p>
-            <button onClick={clicked} className="trashButton" style={{
+            
+            <div className='lists'>
+                {handleFilter().length > 0 ? (
+                handleFilter().map((todo) => (
+                <div className="todo" key={todo.id}>
+                    <input type="checkbox" checked={todo.isCompleted} onChange={() => toggleCompleteTask(todo.id)}/>
+                    <span className={todo.isCompleted ? "completed-task" : ""}>{todo.task}</span>
+                    {filter !== "Trash" ? (
+                    <button className="delete" onClick={() => handleDeleteTask(todo.id)}>&#128465;</button>
+                    ) : (
+                    <button className="restore" onClick={() => handleRestoreTask(todo.id)}>&#8634;</button>
+                    )}
+                </div>
+                ))
+            ) : (
+            <p>No tasks to show</p>
+            )}
+            </div>
+            
+        
+            {/* <button onClick={() => handleDeleteTask(todo.id)} className="trashButton" style={{
                 backgroundColor: isBtnClicked ? 'rgba(0, 0, 0, 0.16)' : 'rgba(0, 0, 0, 0.26)', 
-                display: 'flex', 
-                flexDirection: 'row', 
-                alignItems: 'center'
+                marginTop: 6,
+                display: 'flex',
+                alignItems: 'center',
                 }}>
                 <p style={{
-                    fontSize: 26, 
+                    fontSize: 28, 
                     paddingRight: 15, 
                     paddingLeft: 5, 
-                    paddingBottom: 7
+                    paddingTop: "70px",
                     }}>&#128465;</p>
                 <p style={{
-                    fontSize: 16, 
-                    paddingBottom: 5
+                    fontSize: 18, 
+                    paddingTop: "76px",
                     }}>Move to Trash</p>
-            </button>
-        </div>
-    </div>
-    )
+            </button>         */}
+        </div> 
+    );
 }
+  
