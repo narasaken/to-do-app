@@ -30,7 +30,7 @@
 }
 
 .done{
-    background: linear-gradient(0deg, rgba(8, 30, 52, 0.05), rgba(8, 30, 52, 0.05)), #F0F0F0;
+    background: linear-gradient(0deg, rgba(8, 30, 52, 0.05), rgba(8, 30, 52, 0.05)), #FFFBFE;
     border-radius: 100px;
     display: flex;
     justify-content: center;
@@ -43,7 +43,7 @@
 }
 
 .trash{
-    background: linear-gradient(0deg, rgba(8, 30, 52, 0.05), rgba(8, 30, 52, 0.05)), #F0F0F0;
+    background: linear-gradient(0deg, rgba(8, 30, 52, 0.05), rgba(8, 30, 52, 0.05)), #FFFBFE;
     border-radius: 100px;
     display: flex;
     justify-content: center;
