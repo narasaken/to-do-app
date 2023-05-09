@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import './App.css';
 import Header from "./components/Header";
 import Actions from "./components/Actions";
@@ -7,11 +7,37 @@ import Footer from "./components/Footer";
 import TASKS from "./components/ToDo/todos";
 
 function App() {
-  const [todos, setTodos] = useState([...TASKS]);
+  const [todos, setTodos] = useState(() => {
+    const savedTodos = localStorage.getItem("todos");
+    if (savedTodos) {
+      return JSON.parse(savedTodos);
+    } else {
+      return [...TASKS];
+    }
+  });
+
   const [inputTodo, setInputTodo] = useState("");
   const [filter, setFilter] = useState("All");
-  const [deletedTodos, setDeletedTodos] = useState([]);
+  
+  const [deletedTodos, setDeletedTodos] = useState(() => {
+    const savedDeletedTodos = localStorage.getItem("deletedTodos");
+    if (savedDeletedTodos) {
+      return JSON.parse(savedDeletedTodos);
+    } else {
+      return [];
+    }
+  });
 
+  //localStorage
+  useEffect(() => {
+    localStorage.setItem("todos", JSON.stringify(todos));
+  }, [todos]);
+
+  useEffect(() => {
+    localStorage.setItem("deletedTodos", JSON.stringify(deletedTodos));
+  }, [deletedTodos]);
+
+  //Add tasks
   const handleAddTask = () => {
     if (inputTodo.trim() !== "") {
       setTodos([...todos, {
