@@ -7,35 +7,16 @@ import Footer from "./components/Footer";
 import TASKS from "./components/ToDo/todos";
 
 function App() {
-  const [todos, setTodos] = useState(() => {
-    const savedTodos = localStorage.getItem("todos");
-    if (savedTodos) {
-      return JSON.parse(savedTodos);
-    } else {
-      return [...TASKS];
-    }
-  });
-
+  const [todos, setTodos] = useState(JSON.parse(localStorage.getItem("todos")) || TASKS);
   const [inputTodo, setInputTodo] = useState("");
   const [filter, setFilter] = useState("All");
-  
-  const [deletedTodos, setDeletedTodos] = useState(() => {
-    const savedDeletedTodos = localStorage.getItem("deletedTodos");
-    if (savedDeletedTodos) {
-      return JSON.parse(savedDeletedTodos);
-    } else {
-      return [];
-    }
-  });
+  const [deletedTodos, setDeletedTodos] = useState(JSON.parse(localStorage.getItem("deletedTodos")) || []);
 
   //localStorage
   useEffect(() => {
     localStorage.setItem("todos", JSON.stringify(todos));
-  }, [todos]);
-
-  useEffect(() => {
     localStorage.setItem("deletedTodos", JSON.stringify(deletedTodos));
-  }, [deletedTodos]);
+  }, [todos, deletedTodos]);
 
   //Add tasks
   const handleAddTask = () => {
@@ -61,9 +42,7 @@ function App() {
 
   // Delete forever
   const handleDeleteForever = (deletedTodoId) => {
-    const restDeletedTodos = deletedTodos.filter(
-      (todo) => todo.id !== deletedTodoId
-    );
+    const restDeletedTodos = deletedTodos.filter((todo) => todo.id !== deletedTodoId);
     setDeletedTodos(restDeletedTodos);
   };
 
