@@ -4,40 +4,10 @@ import Header from "./components/Header";
 import Actions from "./components/Actions";
 import ToDo from "./components/ToDo";
 import Footer from "./components/Footer";
+import TASKS from "./components/ToDo/todos";
 
 function App() {
-  const [todos, setTodos] = useState([
-    {
-      task: "Write Essay",
-      id: "1",
-      isCompleted: false,
-      isInTrash: false
-    },
-    {
-      task: "One Hour CSS Course Online",
-      id: "2",
-      isCompleted: false,
-      isInTrash: false
-    },
-    {
-      task: "Buy One Way Ticket to San Francisco",
-      id: "3",
-      isCompleted: false,
-      isInTrash: false
-    },
-    {
-      task: "Go to Gym",
-      id: "4",
-      isCompleted: false,
-      isInTrash: false
-    },
-    {
-      task: "Buy Groceries",
-      id: "5",
-      isCompleted: true,
-      isInTrash: false
-    }
-]);
+  const [todos, setTodos] = useState([...TASKS]);
   const [inputTodo, setInputTodo] = useState("");
   const [filter, setFilter] = useState("All");
   const [deletedTodos, setDeletedTodos] = useState([]);
@@ -61,6 +31,14 @@ function App() {
     deletedTodo.isInTrash = true;
     setTodos(restTodos);
     setDeletedTodos([...deletedTodos, deletedTodo]);
+  };
+
+  // Delete forever
+  const handleDeleteForever = (deletedTodoId) => {
+    const restDeletedTodos = deletedTodos.filter(
+      (todo) => todo.id !== deletedTodoId
+    );
+    setDeletedTodos(restDeletedTodos);
   };
 
   // Filter completed and uncompleted tasks
@@ -112,6 +90,7 @@ function App() {
       handleAddTask={handleAddTask}
       />
       <ToDo 
+      handleDeleteForever={handleDeleteForever}
       toggleCompleteTask={toggleCompleteTask}
       handleDeleteTask={handleDeleteTask}
       handleRestoreTask={handleRestoreTask}

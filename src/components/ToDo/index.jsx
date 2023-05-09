@@ -1,6 +1,6 @@
 import "./style.css";
 
-export default function ToDo({filter, toggleCompleteTask, handleFilter, handleDeleteTask, handleRestoreTask}){
+export default function ToDo({handleDeleteForever, filter, toggleCompleteTask, handleFilter, handleDeleteTask, handleRestoreTask}){
 
     return ( 
         <div className="title">
@@ -16,7 +16,10 @@ export default function ToDo({filter, toggleCompleteTask, handleFilter, handleDe
                     {filter !== "Trash" ? (
                     <button className="delete" onClick={() => handleDeleteTask(todo.id)}>&#128465;</button>
                     ) : (
+                    <>
                     <button className="restore" onClick={() => handleRestoreTask(todo.id)}>&#8634;</button>
+                    <button className="delete-forever" onClick={()=>handleDeleteForever(todo.id)}>Delete Forever</button>
+                    </>
                     )}
                 </div>
                 ))

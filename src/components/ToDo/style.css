@@ -45,7 +45,11 @@
     margin-left: 8px;
     display: flex;
     align-items: center;
-    margin-bottom: 2px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
 }
 
 .delete{
@@ -66,6 +70,21 @@
     position: absolute;
     left: 630px;
     margin-top: 9px;
+}
+
+.delete-forever{
+    background: #E4E6E7;
+    border-radius: 15px;
+    border: none;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.16);
+    position: absolute;
+    left: 44rem;
+    height: 48px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
 }
 
 .completed-task {
