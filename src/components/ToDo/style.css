@@ -90,3 +90,51 @@
 .completed-task {
     text-decoration: line-through;
   }
+
+  @media only screen and (max-width: 430px) {
+    .lists .todo{
+        width: 340px;
+
+    }
+    .delete{
+        position: absolute;
+        left: 34rem;
+        margin-top: 7px;
+    }
+    
+    .restore{
+        position: absolute;
+        left: 34rem;
+        margin-top: 9px;
+    }
+    
+    .delete-forever{
+        position: absolute;
+        left: 38rem;
+        height: 48px;
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+    .lists .todo{
+        width: 400px;
+
+    }
+    .delete{
+        position: absolute;
+        left: 37rem;
+        margin-top: 7px;
+    }
+    
+    .restore{
+        position: absolute;
+        left: 37rem;
+        margin-top: 9px;
+    }
+    
+    .delete-forever{
+        position: absolute;
+        left: 42rem;
+        height: 48px;
+    }
+  }

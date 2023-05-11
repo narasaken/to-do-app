@@ -164,6 +164,9 @@
 
   @media only screen and (max-width: 600px) {
     .add {
+        display: flex;
+        align-items: center;
+        justify-content: center;
         position: relative;
         left: 2rem;
         bottom: 0.4rem;
@@ -201,8 +204,11 @@
     }
   }
 
-  @media only screen and (max-width: 400px) {
+  @media only screen and (max-width: 430px) {
     .add {
+        display: flex;
+        align-items: center;
+        justify-content: center;
         position: relative;
         left: -4rem;
         bottom: 5rem;
@@ -212,7 +218,7 @@
         height: 50px;
         position: absolute;
         left: 24rem;
-        top: 13rem;
+        top: 12rem;
     }
     .add-input{
         font-size: 9px;
