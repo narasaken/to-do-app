@@ -209,6 +209,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        padding: 11px;
         position: relative;
         left: -4rem;
         bottom: 5rem;
