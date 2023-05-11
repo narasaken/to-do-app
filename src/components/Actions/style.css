@@ -66,7 +66,7 @@
     height: 52px;
     font-size: 36px;
     position: relative;
-    left: 44rem;
+    left: 105rem;
     bottom: 0.4rem;
 }
 
@@ -81,7 +81,7 @@
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.16);
     border-radius: 12px;
     position: absolute;
-    left: 58rem;
+    left: 118rem;
     top: 4.2rem;
 }
 
@@ -135,3 +135,87 @@
     color: #FFFFFF;
     margin: 9px 20px;
 }
+
+@media only screen and (max-width: 2000px) {
+    .add {
+      position: relative;
+        left: 66rem;
+        bottom: 0.4rem;
+    }
+    .add-window{
+        position: absolute;
+        left: 80rem;
+        top: 4.2rem;
+    }
+  }
+
+@media only screen and (max-width: 1800px) {
+    .add {
+      position: relative;
+        left: 57rem;
+        bottom: 0.4rem;
+    }
+    .add-window{
+        position: absolute;
+        left: 71rem;
+        top: 4.2rem;
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+    .add {
+        position: relative;
+        left: 2rem;
+        bottom: 0.4rem;
+    }
+    .add-window{
+        width: 150px;
+        height: 50px;
+        position: absolute;
+        left: 24rem;
+        top: 23rem;
+    }
+    .add-task{
+        font-size: 10px;
+        position: absolute;
+        bottom: -2.5rem;
+    }
+    .add-input{
+        font-size: 10px;
+        width: 120px;
+        height: 5px;
+        position: relative;
+        top: 0.5rem;
+        left: -0.2rem;
+    }
+    .add-button{
+        width: 36px;
+        height: 15px;
+        position: relative;
+        top: 0.25rem;
+        left: -0.2rem;
+    }
+    .add-text{
+        font-size: 8px;
+        margin: -3px 7px;
+    }
+  }
+
+  @media only screen and (max-width: 400px) {
+    .add {
+        position: relative;
+        left: -4rem;
+        bottom: 5rem;
+    }
+    .add-window{
+        width: 80px;
+        height: 50px;
+        position: absolute;
+        left: 24rem;
+        top: 13rem;
+    }
+    .add-input{
+        font-size: 9px;
+        width: 60px;
+    }
+  }
