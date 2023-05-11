@@ -99,20 +99,29 @@
     .delete{
         position: absolute;
         left: 34rem;
-        margin-top: 7px;
+        margin-top: 25px;
+        font-size: 18px;
     }
     
     .restore{
         position: absolute;
         left: 34rem;
         margin-top: 9px;
+        font-size: 18px;
     }
     
     .delete-forever{
         position: absolute;
         left: 38rem;
-        height: 48px;
+        
     }
+    .todo input {
+        margin-left: 8px;
+        display: flex;
+        align-items: center;
+        margin-top: 12px;
+    }
+    
   }
 
   @media only screen and (max-width: 600px) {
