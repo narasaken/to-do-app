@@ -98,27 +98,27 @@
     }
     .delete{
         position: absolute;
-        left: 26rem;
+        left: 25rem;
         margin-top: 28px;
         font-size: 17px;
     }
     
     .restore{
         position: absolute;
-        left: 26rem;
+        left: 25rem;
         margin-top: 11px;
         font-size: 17px;
     }
     
     .delete-forever{
         position: absolute;
-        left: 30rem;
+        left: 28rem;
     }
     .todo input {
         margin-left: 8px;
         display: flex;
         align-items: center;
-        margin-top: 13px;
+        margin-top: 15px;
     }
     
   }
@@ -130,25 +130,25 @@
     }
     .delete{
         position: absolute;
-        left: 26rem;
+        left: 25rem;
         margin-top: 10px;
     }
     
     .restore{
         position: absolute;
-        left: 26rem;
+        left: 25rem;
         margin-top: 12px;
     }
     
     .delete-forever{
         position: absolute;
-        left: 32rem;
+        left: 30rem;
         height: 48px;
     }
     .todo input {
         margin-left: 8px;
         display: flex;
         align-items: center;
-        margin-top: 12px;
+        margin-top: 15px;
     }
   }
